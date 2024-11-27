@@ -1,0 +1,10 @@
+body {
+	margin: 0px;
+}
+/*
+.nav-bar button {
+	width: 100px;
+}*/
+.navbar-nav .nav-link:hover{
+	background-color: #444;
+}
