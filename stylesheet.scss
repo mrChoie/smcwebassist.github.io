@@ -3,3 +3,8 @@ $primary: green;
 body {
 	margin: 0px;
 }
+
+div .accOpt:hover {
+	background-color: gray;
+	transition: 10ms;
+}
