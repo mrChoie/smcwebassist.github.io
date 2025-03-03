@@ -6,7 +6,6 @@
 	<title>SMC Web-Assist</title>
 	<link href="bootstrap-5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -16,17 +15,9 @@
 				<div class="card-body">
 					<img class="pt-4" src="smcLogo.png" style="height: 40%; width: 40%; margin: auto;"><br><br>
 					<h5> SMC WEB-Assistant</h5>
-					<!-- <div class="pt-4">
-						<i id="loginIcon" class="fa fa-user-circle" style="font-size: 1.3em;"></i>
-						<input class="LoginForm" type="text" id="userName" placeholder="Username">
-					</div>
-					<div class="pt-4">
-						<i id="loginIcon" class="fa fa-lock" style="font-size: 1.4em;"></i>
-						<input class="form-control" type="text" id="userPass" placeholder="Username">
-					</div> -->
 					<div class="row pt-5">
 						<div class="col-2 ps-5">
-							<i class="fa fa-user-circle pt-2" style="font-size: 1.2em;"></i>
+							<i class="fa fa-user-circle pt-4" style="font-size: 1.2em;"></i>
 						</div>
 						<div class="col-9">
 							<input type="text" class="form-control rounded-0 border-2 border-start-0 border-top-0 border-end-0" id="userName" placeholder="Username">
@@ -34,24 +25,26 @@
 					</div>
 					<div class="row pt-2">
 						<div class="col-2 ps-5">
-							<i class="fa fa-lock pt-2" style="font-size: 1.6em;"></i>
+							<i class="fa fa-lock pt-4" style="font-size: 1.2em;"></i>
 						</div>
 						<div class="col-9">
 							<input type="text" class="form-control rounded-0 border-2 border-start-0 border-top-0 border-end-0" id="userPass" placeholder="Password">
 						</div>
 					</div>
+					<div class="col-md-6 offset-md-3 pt-4">
+						<button class="btn btn-outline-success" type="button" id="LoginBtn" disabled>Log In</button>
+					</div>
+					<br>
+					<p style="font-size: 13px;">Don't have an Account? <a onclick="closeLogin()" style="cursor: pointer; color: rgb(2, 80, 145);">Sign up!</a></p>
 				</div>
 			</div>
 		</div>
-		<i class="fa fa-close p-4" style="font-size:30px;padding: 5px; color: white; position: fixed; right: 0; margin-top: 96px;" onclick="closeLogin()" id="closeLoginBtn" tabindex="1"></i>
+		<i class="fa fa-close" style="font-size:28px; color: white; position: fixed; right: 0; margin-top: 96px; margin-right: 19px;" onclick="closeLogin()" id="closeLoginPrompt" tabindex="1"></i>
 	</div>
 	<nav class="navbar navbar-expand-lg navbar-light p-3" id="navBar">
 		<!-- Home Button -->
-		<a class="navbar-brand" href="home.html">
-			<i class="fa fa-home ps-2 pe-2" style="font-size:30px;padding: 5px;"></i>
-		</a>
 		<!-- Webpage Name -->
-		<p class="navbar-brand m-0 pe-3"> SMC Web-Assist</p>
+		<a class="navbar-brand m-0 pt-0 ps-3 pe-2" href="home.html"> SMC Web-Assist</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarContent" aria-controls="navBarContent" aria-expanded="false">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -81,7 +74,7 @@
 						<div class="d-flex flex-column">
 							<a class="btn nav-link" href="index/account.html">Profile</a>
 							<a class="btn nav-link" href="index/settings.html">Settings</a>
-							<button onclick="openLogin()" class="btn nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="accOpt" id="loginBtn">Login</button>
+							<button onclick="openLogin()" class="btn nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="accOpt" id="loginPrompt">Login</button>
 							<button class="btn p-3" id="logoutBtn">Logout</button>	
 						</div>
 					</nav>
@@ -180,6 +173,7 @@
 	<div id="boxTest" style="background-color: #555; height: 100px; width: 200px;">
 		<h1>Box 4</h1>
 	</div>
+	<script src="https://kit.fontawesome.com/67f996be23.js" crossorigin="anonymous"></script>
 	<script src="script.js"></script>
 	<script src="bootstrap-5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
