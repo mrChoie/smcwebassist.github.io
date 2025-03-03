@@ -10,10 +10,45 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3" id="navBar">
+	<div id="modalContainer">
+		<div class="rounded shadow animate" id="modalLogin">
+			<div class="card text-center">
+				<div class="card-body">
+					<img class="pt-4" src="smcLogo.png" style="height: 40%; width: 40%; margin: auto;"><br><br>
+					<h5> SMC WEB-Assistant</h5>
+					<!-- <div class="pt-4">
+						<i id="loginIcon" class="fa fa-user-circle" style="font-size: 1.3em;"></i>
+						<input class="LoginForm" type="text" id="userName" placeholder="Username">
+					</div>
+					<div class="pt-4">
+						<i id="loginIcon" class="fa fa-lock" style="font-size: 1.4em;"></i>
+						<input class="form-control" type="text" id="userPass" placeholder="Username">
+					</div> -->
+					<div class="row pt-5">
+						<div class="col-2 ps-5">
+							<i class="fa fa-user-circle pt-2" style="font-size: 1.2em;"></i>
+						</div>
+						<div class="col-9">
+							<input type="text" class="form-control rounded-0 border-2 border-start-0 border-top-0 border-end-0" id="userName" placeholder="Username">
+						</div>
+					</div>
+					<div class="row pt-2">
+						<div class="col-2 ps-5">
+							<i class="fa fa-lock pt-2" style="font-size: 1.6em;"></i>
+						</div>
+						<div class="col-9">
+							<input type="text" class="form-control rounded-0 border-2 border-start-0 border-top-0 border-end-0" id="userPass" placeholder="Password">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<i class="fa fa-close p-4" style="font-size:30px;padding: 5px; color: white; position: fixed; right: 0; margin-top: 96px;" onclick="closeLogin()" id="closeLoginBtn" tabindex="1"></i>
+	</div>
+	<nav class="navbar navbar-expand-lg navbar-light p-3" id="navBar">
 		<!-- Home Button -->
 		<a class="navbar-brand" href="home.html">
-			<i class="fa fa-home ps-4" style="font-size:30px;padding: 5px;"></i>
+			<i class="fa fa-home ps-2 pe-2" style="font-size:30px;padding: 5px;"></i>
 		</a>
 		<!-- Webpage Name -->
 		<p class="navbar-brand m-0 pe-3"> SMC Web-Assist</p>
@@ -40,29 +75,86 @@
 				<button class="btn btn-dark d-float" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="collapseWidthExample">
 					<i class="fa fa-user"></i>
 				</button>-->
-				<button class="btn btn-dark nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="accOpt">Account</button>
-				<div class=" collapse collapse-horizontal text-light position-absolute mt-3" id="accOpt">
-					<div class="bg-dark" style="width: 300px; border-radius: 0px 0px 20px 20px;">
+				<button class="btn nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="accOpt" id="accNavBarBtn">Account</button>
+				<div class="collapse collapse-horizontal text-light position-absolute mt-3" id="accOpt">
+					<nav id="accOptContent" style="width: 300px; border-radius: 0px 0px 20px 20px;">
 						<div class="d-flex flex-column">
-							<a class="p-3" href="index/account.html">Profile</a>
-							<a class="p-3" href="index/settings.html">Settings</a>
-							<button onclick="openLogin()" class="btn btn-dark">Login</button>
-							<button class="btn p-3">Logout</button>	
+							<a class="btn nav-link" href="index/account.html">Profile</a>
+							<a class="btn nav-link" href="index/settings.html">Settings</a>
+							<button onclick="openLogin()" class="btn nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="accOpt" id="loginBtn">Login</button>
+							<button class="btn p-3" id="logoutBtn">Logout</button>	
 						</div>
-					</div>
+					</nav>
 				</div>
 				</li>
 			</ul>
 		</div>
 	</nav>
-	<div id="modalContainer">
+	
+	<br>
+	<div class="container-md bg-light" id="homeBodyContent">
+		<p class="display-1">Hello World!</p>
 		<div class="container">
-			<div class="border">
-				<i class="fa fa-close p-4" style="font-size:30px;padding: 5px; color: white;" onclick="closeLogin()" id="closeLoginBtn"></i>
-			</div>
 			<div class="row">
-				<div id="modalLogin">
-					test
+				<div class="col">
+					box1
+				</div>
+				<div class="col">
+					box2
+				</div>
+				<div class="col">
+					box3
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="container-md bg-light" id="homeBodyContent">
+		<p class="display-1">Hello World!</p>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					box1
+				</div>
+				<div class="col">
+					box2
+				</div>
+				<div class="col">
+					box3
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="container-md bg-light" id="homeBodyContent">
+		<p class="display-1">Hello World!</p>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					box1
+				</div>
+				<div class="col">
+					box2
+				</div>
+				<div class="col">
+					box3
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="container-md bg-light" id="homeBodyContent">
+		<p class="display-1">Hello World!</p>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					box1
+				</div>
+				<div class="col">
+					box2
+				</div>
+				<div class="col">
+					box3
 				</div>
 			</div>
 		</div>
