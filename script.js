@@ -1,6 +1,6 @@
 window.onload; {
   let element = document.getElementById("modalContainer");
-    element.style.display = "none";
+  element.style.display = "none";
   let logoutBtn = document.getElementById("logoutBtn");
   logoutBtn.style.display= "none";
 }
@@ -14,14 +14,20 @@ function openLogin() {
     let accNavBarElement = document.getElementById("accNavBarBtn");
     accNavBarElement.hasAttribute("disabled");
     element.style.display = "flex";
-    element.style.transition= "1.0s";
-    console.log(accNavBarElement.attributes);
 };
+
+function signIn(){
+  console.log("signIn Funct call")
+  if (document.getElementById("userName").value != "") {
+    console.log("Signed in!");
+  } else {
+    console.log("Fill in the username first!");
+  }
+}
 
 function closeLogin(){
   let element = document.getElementById("modalContainer");
   let accNavBarElement = document.getElementById("accNavBarBtn");
   accNavBarElement.removeAttribute("disabled");
   element.style.display = "none";
-  console.log(accNavBarElement.attributes);
 }

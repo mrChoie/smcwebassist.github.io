@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SMC Web-Assist</title>
+	<link href="\../bootstrap-5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="\../stylesheet.css">
+
+</head>
+<body>
+	<div>
+		<div class="rounded shadow" id="modalLogin" style="margin-top: 100px;">
+			<div class="card text-center">
+				<div class="card-body">
+					<img class="pt-4" src="\../smcLogo.png" style="height: 40%; width: 40%; margin: auto;"><br><br>
+					<h5> SMC WEB-Assistant</h5>
+					<div class="row pt-5">
+						<div class="col-2 ps-5">
+							<i class="fa fa-user-circle pt-2" style="font-size: 1.2em;"></i>
+						</div>
+						<div class="col-9">
+							<input type="text" class="form-control rounded-0 border-2 border-start-0 border-top-0 border-end-0" id="userName" placeholder="Username">
+						</div>
+					</div>
+					<div class="row pt-2">
+						<div class="col-2 ps-5">
+							<i class="fa fa-lock pt-2" style="font-size: 1.2em;"></i>
+						</div>
+						<div class="col-9">
+							<input type="password" class="form-control rounded-0 border-2 border-start-0 border-top-0 border-end-0" id="userPass" placeholder="Password" onkeyup="showPassIcon()">
+							<div id="showPassIconDiv">
+								<i class="fa-solid fa-eye-slash" id="showPassIcon" onclick="showHidePass()"></i>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 offset-md-3 pt-4">
+						<button class="btn btn-outline-success" type="button" id="LoginBtn" onclick="signIn()">Create Account</button>
+					</div>
+                    <br>
+                    <p style="font-size: 13px;">Return to <a style="cursor: pointer; color: rgb(2, 80, 145);" href="\../home.html">Homepage</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="modalContainer">box</div>
+		<i class="fa-solid fa-close" style="font-size:28px; color: white; position: fixed; right: 0;" id="logoutBtn"></i>
+	</div>
+	<script src="https://kit.fontawesome.com/67f996be23.js" crossorigin="anonymous"></script>
+	<script src="\../script.js"></script>
+	<script src="signupScript.js"></script>
+	<script src="\../bootstrap-5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -10,6 +10,7 @@ nav {
 	color: black;
 }
 
+
 #modalContainer {
 	z-index: 10;
 	position: fixed;
@@ -24,8 +25,8 @@ nav {
 	margin-left: auto;
 	margin-right: auto;
 	width: 360px;
-	height: 500px;
-	/* background-color: rgb(139, 195, 74); */
+	height: 502px;
+	background-color: rgb(139, 195, 74);
 }
 
 .animate {
@@ -48,4 +49,19 @@ nav {
 .loginForm {
 	width: 100%;
 	background-color: red;
+}
+
+#showPassIconDiv{
+	display: none;
+	position: relative;
+    float: right;
+    margin-top: -27px;
+	margin-right: 5px;
+	opacity: 0.3;
+}
+
+#homeBodyContent {
+	background-color: white;
+	box-shadow: 0px 0px 30px #c0c0c0;
+	/* filter: blur(1px); */
 }
