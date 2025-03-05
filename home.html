@@ -28,7 +28,10 @@
 							<i class="fa fa-lock pt-2" style="font-size: 1.2em;"></i>
 						</div>
 						<div class="col-9">
-							<input type="text" class="form-control rounded-0 border-2 border-start-0 border-top-0 border-end-0" id="userPass" placeholder="Password">
+							<input type="password" class="form-control rounded-0 border-2 border-start-0 border-top-0 border-end-0" id="userPass" placeholder="Password" onkeyup="showPassIcon()">
+							<div id="showPassIconDiv">
+								<i class="fa-solid fa-eye-slash" id="showPassIcon" onclick="showHidePass()"></i>
+							</div>
 						</div>
 					</div>
 					<div class="col-md-6 offset-md-3 pt-4">
@@ -102,14 +105,18 @@
 				<div class="col-6">
 					<div class="card">
 						<div class="card-body">
-							Box 1
+							<img class="card-img" src="inquire.png">
+							Lorem ipsum dolor sit amet, consectetur 
+							adipiscing elit.
 						</div>
 					</div>
 				</div>
 				<div class="col-6">
 					<div class="card">
 						<div class="card-body">
-							Box 2
+							<img class="card-img" src="inquire.png">
+							Lorem ipsum dolor sit amet, consectetur 
+							adipiscing elit.
 						</div>
 					</div>
 				</div>
