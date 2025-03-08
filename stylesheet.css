@@ -60,8 +60,18 @@ nav {
 	opacity: 0.3;
 }
 
-#homeBodyContent {
+#homeBodyContent1 {
 	background-color: white;
-	box-shadow: 0px 0px 30px #c0c0c0;
+	box-shadow: 0px 0px 100px #d4d4d485;
 	/* filter: blur(1px); */
+}
+#homeBodyContent2 {
+	background-color: rgb(250, 251, 253);
+	box-shadow: 0px 0px 100px #d4d4d485;
+	/* filter: blur(1px); */
+}
+
+#footer {
+	width: 100%;
+	background-color: rgb(139, 195, 74);
 }
