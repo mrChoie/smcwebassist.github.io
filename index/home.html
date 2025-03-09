@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>SMC Web-Assist | Home</title>
+	<link rel="icon" type="image/x-icon" href="../img/smcLogo.ico">
 	<link href="../bootstrap-5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../stylesheet.css">
 
@@ -12,6 +13,7 @@
 	<div id="modalContainer">
 		<div class="rounded shadow animate rounded-lg" id="modalLogin">
 			<div class="card text-center rounded-lg">
+				<i class="fa-solid fa-close mt-2 me-2" onclick="closeLogin()" id="closeLoginPrompt"></i>
 				<div class="card-body">
 					<img class="pt-4" src="../img/smcLogo.png" style="height: 40%; width: 40%; margin: auto;"><br><br>
 					<h5> SMC WEB-Assistant</h5>
@@ -42,7 +44,6 @@
 				</div>
 			</div>
 		</div>
-		<i class="fa fa-close" style="font-size:28px; color: white; position: fixed; right: 0; margin-top: 96px; margin-right: 19px;" onclick="closeLogin()" id="closeLoginPrompt" tabindex="1"></i>
 	</div>
 	<nav class="navbar navbar-expand-lg navbar-light p-3" id="navBar">
 		<!-- Home Button -->
@@ -67,10 +68,6 @@
 				</li>
 				<li class="nav-item ps-3">
 				<!-- Account Button -->
-				 <!--
-				<button class="btn btn-dark d-float" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="collapseWidthExample">
-					<i class="fa fa-user"></i>
-				</button>-->
 				<button class="btn nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="accOpt" id="accNavBarBtn">Account</button>
 				<div class="collapse collapse-horizontal text-light position-absolute mt-3" id="accOpt">
 					<nav id="accOptContent" style="width: 300px; border-radius: 0px 0px 20px 20px;">
@@ -89,12 +86,12 @@
 	
 	
 	<div class="container-fluid pb-5" id="homeBodyContent1">
-		<p class="text-center pt-5 display-1" id="headline">WEB Assistant</p>
-		<h6 class="text-center" style="margin-top: -12px; margin-bottom: 26px; margin-left: 2px;">SOUTHERN MINDANAO COLLEGES</h6>
+		<h6 class="text-center pt-5">SOUTHERN MINDANAO COLLEGES</h6>
+		<p class="text-center display-2 mb-4" id="headline" style="margin-top: -12px;">WEB Assistant</p>
 		<div class="container">
 			<div class="row">
 				<div class="text-center p-0 mt-3 mb-5 h6">
-					SMC Web-Assistant is an online consultation platform aims to provide a safe place for students to submit their school-related concerns and interest. Consultation made easy!
+					<h3>SMC Web-Assistant is an online consultation platform aims to provide a safe place for students to submit their school-related concerns and interest.</h3>
 				</div>
 			</div>
 			<p class="mb-5 text-center" style="font-style: italic;"> Simplifying Student Support - Submit Your Concerns, Get Prompt Solutions!</p>
@@ -104,7 +101,9 @@
 						<div class="card-body rounded-lg p-0">
 							<img class="card-img rounded-0" src="../img/inquire2.png">
 							<p class="mt-4" style="font-size: 0.7em;">Want to inquire for school matters? Submit a ticket to our DSA Officers</p>
-							<button class="btn btn-outline-success rounded-lg mb-4" type="button">Learn More</button>
+							<a href="submit.html">
+								<button class="btn btn-outline-success rounded-lg mb-4" type="button">Learn More</button>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -113,7 +112,9 @@
 						<div class="card-body rounded-lg p-0">
 							<img class="card-img rounded-0" src="../img/feedback2.png">
 							<p class="mt-4" style="font-size: 0.7em;">Have a feedback about the school? Get it reviewed by the school</p>
-							<button class="btn btn-outline-success rounded-lg mb-4" type="button">Learn More</button>
+							<a href="feedback.html">
+								<button class="btn btn-outline-success rounded-lg mb-4" type="button">Learn More</button>
+							</a>
 						</div>
 					</div>
 				</div>

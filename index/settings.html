@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>SMC Web-Assist | Settings</title>
+	<link rel="icon" type="image/x-icon" href="../img/smcLogo.ico">
 	<link href="../bootstrap-5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../stylesheet.css">
 
@@ -12,6 +13,7 @@
 	<div id="modalContainer">
 		<div class="rounded shadow animate rounded-lg" id="modalLogin">
 			<div class="card text-center rounded-lg">
+				<i class="fa-solid fa-close mt-2 me-2" onclick="closeLogin()" id="closeLoginPrompt"></i>
 				<div class="card-body">
 					<img class="pt-4" src="../img/smcLogo.png" style="height: 40%; width: 40%; margin: auto;"><br><br>
 					<h5> SMC WEB-Assistant</h5>
@@ -42,7 +44,6 @@
 				</div>
 			</div>
 		</div>
-		<i class="fa fa-close" style="font-size:28px; color: white; position: fixed; right: 0; margin-top: 96px; margin-right: 19px;" onclick="closeLogin()" id="closeLoginPrompt" tabindex="1"></i>
 	</div>
 	<nav class="navbar navbar-expand-lg navbar-light p-3" id="navBar">
 		<!-- Home Button -->
