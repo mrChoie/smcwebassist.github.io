@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>SMC Web-Assist | Profile</title>
+	<title>SMC Web-Assist | Home</title>
 	<link href="../bootstrap-5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../stylesheet.css">
 
@@ -71,11 +71,11 @@
 				<button class="btn btn-dark d-float" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="collapseWidthExample">
 					<i class="fa fa-user"></i>
 				</button>-->
-				<button class="btn nav-link active" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="accOpt" id="accNavBarBtn">Account</button>
+				<button class="btn nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="accOpt" id="accNavBarBtn">Account</button>
 				<div class="collapse collapse-horizontal text-light position-absolute mt-3" id="accOpt">
 					<nav id="accOptContent" style="width: 300px; border-radius: 0px 0px 20px 20px;">
 						<div class="d-flex flex-column">
-							<a class="btn nav-link" href="#">Profile</a>
+							<a class="btn nav-link" href="account.html">Profile</a>
 							<a class="btn nav-link" href="settings.html">Settings</a>
 							<button onclick="openLogin()" class="btn nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="accOpt" id="loginPrompt">Login</button>
 							<button class="btn p-3" id="logoutBtn">Logout</button>	
@@ -88,20 +88,66 @@
 	</nav>
 	
 	
-	<div class="container-fluid pb-5" id="aboutBodyContent1">
-		Content 1
+	<div class="container-fluid pb-5" id="homeBodyContent1">
+		<p class="text-center pt-5 display-1" id="headline">WEB Assistant</p>
+		<h6 class="text-center" style="margin-top: -12px; margin-bottom: 26px; margin-left: 2px;">SOUTHERN MINDANAO COLLEGES</h6>
+		<div class="container">
+			<div class="row">
+				<div class="text-center p-0 mt-3 mb-5 h6">
+					SMC Web-Assistant is an online consultation platform aims to provide a safe place for students to submit their school-related concerns and interest. Consultation made easy!
+				</div>
+			</div>
+			<p class="mb-5 text-center" style="font-style: italic;"> Simplifying Student Support - Submit Your Concerns, Get Prompt Solutions!</p>
+			<div class="row text-center">
+				<div class="col-sm-3 offset-sm-3 mb-4">
+					<div class="card">
+						<div class="card-body rounded-lg p-0">
+							<img class="card-img rounded-0" src="../img/inquire2.png">
+							<p class="mt-4" style="font-size: 0.7em;">Want to inquire for school matters? Submit a ticket to our DSA Officers</p>
+							<button class="btn btn-outline-success rounded-lg mb-4" type="button">Learn More</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="card">
+						<div class="card-body rounded-lg p-0">
+							<img class="card-img rounded-0" src="../img/feedback2.png">
+							<p class="mt-4" style="font-size: 0.7em;">Have a feedback about the school? Get it reviewed by the school</p>
+							<button class="btn btn-outline-success rounded-lg mb-4" type="button">Learn More</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
-	<div class="container-fluid pt-5" id="aboutBodyContent2">
-		Content 2
+	<div class="container-fluid pt-5" id="homeBodyContent2">
+		<div class="row">
+			<div class="col-sm-6 p-3 text-center">
+				<p class="h1">Our Ticketing System</p>
+				<img class="img-fluid" src="../img/review.gif" >
+			</div>
+			<div class="col-sm-6">
+				<p class="p-3 pt-5">
+					With our Ticketing System, handling of inquiries are made easy! Tickets 
+					are treated as support request, each one having a unique identifier
+					to easily manage it. Tickets that are submitted are organized in our
+					database and can be monitored through the <a class="text-success" href="#">dashboard</a> page.
+				</p>
+				<p class="p-3 pt-1">
+					
+				</p>
+			</div>
+		</div>
+
 	</div>
 	<div class="container">
 		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
 			<p class="col-md-4 mb-0 text-body-secondary">&copy; 2025 BSCPE SENIORS INC.</p>
 				<ul class="nav col-md-4 justify-content-end">
-				<li class="nav-item"><a href="home.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
 				<!-- <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li> -->
-				<li class="nav-item active"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+				<li class="nav-item"><a href="about.html" class="nav-link px-2 text-body-secondary">About</a></li>
 			</ul>
 		</footer>
 	</div>
