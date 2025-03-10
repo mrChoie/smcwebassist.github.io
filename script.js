@@ -58,7 +58,6 @@ function toggleTicketInvalidNotice(){
         if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
-          console.log("test");
         }
         form.classList.add('was-validated')
       }, false)
