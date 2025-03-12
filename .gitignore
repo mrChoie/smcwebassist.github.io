@@ -1,5 +1,7 @@
-/bootstrap-5.0.2
+/public/bootstrap/bootstrap-5.0.2
 /node_modules
+/.vscode
 package-lock.json
 package.json
 smcWebAssistDB.sql
+.env

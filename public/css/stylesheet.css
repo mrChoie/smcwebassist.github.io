@@ -1,5 +1,3 @@
-@import url(bootstrap-5.0.2\scss\_variables.scss);
-
 .fa-close:hover{
 	opacity: 1.0;
 	transition: 0.3s;
