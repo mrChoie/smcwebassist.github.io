@@ -21,3 +21,5 @@
 - Note: npm must be installed before initializing
 - type in terminal:
     ``npm init -y``
+
+<i>Note: No comments inside the source files since I'm free-styling everything</i>
