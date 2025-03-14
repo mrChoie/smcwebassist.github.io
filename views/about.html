@@ -3,10 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>SMC Web-Assist | Settings</title>
-	<link rel="icon" type="image/x-icon" href="../../img/smcLogo.ico">
-	<link href="../../bootstrap-5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+	<title>SMC Web-Assist | About</title>
+	<link rel="icon" type="image/x-icon" href="/img/smcLogo.ico">
+	<link href="/bootstrap/bootstrap-5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
 
 </head>
 <body>
@@ -15,7 +15,7 @@
 			<div class="card text-center rounded-lg">
 				<i class="fa-solid fa-close mt-2 me-2" onclick="closeLogin()" id="closeLoginPrompt"></i>
 				<div class="card-body">
-					<img class="pt-4" src="../../img/smcLogo.png" style="height: 40%; width: 40%; margin: auto;"><br><br>
+					<img class="pt-4" src="/img/smcLogo.png" style="height: 40%; width: 40%; margin: auto;"><br><br>
 					<h5> SMC WEB-Assistant</h5>
 					<div class="row pt-5">
 						<div class="col-2 ps-5">
@@ -40,7 +40,7 @@
 						<button class="btn btn-outline-success" type="button" id="LoginBtn" onclick="signIn()">Log In</button>
 					</div>
 					<br>
-					<p style="font-size: 13px;">Don't have an Account? <a style="cursor: pointer; color: rgb(2, 80, 145);" href="../signup.html">Sign up!</a></p>
+					<p style="font-size: 13px;">Don't have an Account? <a style="cursor: pointer; color: rgb(2, 80, 145);" href="/smc-webassist/signup">Sign up!</a></p>
 				</div>
 			</div>
 		</div>
@@ -48,7 +48,7 @@
 	<nav class="navbar navbar-expand-lg navbar-light p-3" id="navBar">
 		<!-- Home Button -->
 		<!-- Webpage Name -->
-		<a class="navbar-brand m-0 pt-0 ps-3 pe-2" href="../home.html"> SMC Web-Assist</a>
+		<a class="navbar-brand m-0 pt-0 ps-3 pe-2" href="/smc-webassist/home"> SMC Web-Assist</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarContent" aria-controls="navBarContent" aria-expanded="false">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -56,15 +56,15 @@
 			<ul class="navbar-nav d-flex justify-content-start me-auto mb-2 mb-lg-0">
 				<li class="nav-item ps-3">
 				<!-- Submit Button -->
-				<a class="nav-link active" aria-current="page" href="../submit.html">Submit</a>
+				<a class="nav-link" aria-current="page" href="/smc-webassist/category">Submit</a>
 				</li>
 				<li class="nav-item ps-3">
 				<!-- Feedback Button -->
-				<a class="nav-link" aria-current="page" href="../feedback.html">Feedback</a>
+				<a class="nav-link" aria-current="page" href="/smc-webassist/feedback">Feedback</a>
 				</li>
 				<li class="nav-item ps-3">
 				<!-- About Button -->
-				<a class="nav-link" aria-current="page" href="../about.html">About</a>
+				<a class="nav-link active" aria-current="page" href="/smc-webassist/about#">About</a>
 				</li>
 				<li class="nav-item ps-3">
 				<!-- Account Button -->
@@ -76,8 +76,8 @@
 				<div class="collapse collapse-horizontal text-light position-absolute mt-3" id="accOpt">
 					<nav id="accOptContent" style="width: 300px; border-radius: 0px 0px 20px 20px;">
 						<div class="d-flex flex-column">
-							<a class="btn nav-link" href="../account.html">Profile</a>
-							<a class="btn nav-link" href="../settings.html">Settings</a>
+							<a class="btn nav-link" href="/smc-webassist/account">Profile</a>
+							<a class="btn nav-link" href="/smc-webassist/account/settings">Settings</a>
 							<button onclick="openLogin()" class="btn nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="accOpt" id="loginPrompt">Login</button>
 							<button class="btn p-3" id="logoutBtn">Logout</button>	
 						</div>
@@ -90,66 +90,26 @@
 	
 	
 	<div class="container-fluid pb-5" id="aboutBodyContent1">
-		<div class="container mt-3 pb-5">
-			<h3 class="mt-5">CATEGORY #1 TITLE</h3>
-			<form class="needs-validation" novalidate style="font-size: 16px;">
-				<div class="row mt-3">
-					<div class="col-8">
-						<label for="ticketStudName" id="ticketLabel">Student Name</label>
-						<input type="text" class="form-control rounded-0 rounded-bottom" id="ticketStudName" placeholder="Last Name, First Name" required>
-					</div>
-					<div class="col-4">
-						<label for="ticketIdNum" id="ticketLabel">ID Number</label>
-						<input type="text" class="form-control rounded-0 rounded-bottom" id="ticketIdNum" placeholder="" required>
-					</div>
-				</div>
-				<div class="row mt-2">
-					<div class="col">
-						<label for="ticketSubj" id="ticketLabel">Subject Title</label>
-						<input type="text" class="form-control rounded-0 rounded-bottom" id="ticketSubj" placeholder="Title" required>
-					</div>
-				</div>
-				<div class="row mt-2">
-					<div class="col">
-						<label for="ticketDesc" id="ticketLabel">Description</label>
-						<textarea class="form-control rounded-0 rounded-bottom" id="ticketDesc" rows="8" placeholder="Inquiry description..." required></textarea>
-					</div>
-				</div>
-				<div class="row mt-2">
-					<div class="col">
-						<label for="ticketFile" id="ticketLabel">Attache a File</label>
-						<input type="file" class="form-control rounded-0 rounded-bottom" id="ticketFile">
-					</div>
-				</div>
-				<i class="mt-4 ps-1 text-danger" id="ticketInvalidNotice" style="display: none; position: absolute; ">Note: Fields with ! are required.</i>
-				<div class="row mt-5 text-center">
-					<div class="col pt-4">
-						<button class="btn btn-success ps-5 pe-5" type="submit" onclick="toggleTicketInvalidNotice()">Submit Ticket</button>
-						<button class="btn btn-outline-danger" type="reset" style="float: right;"><i class="fa-solid fa-trash"></i></button>
-					</div>
-				</div>
-			</form>
-		</div>
+		Content 1
 	</div>
 
-	<div class="container text-center" id="category1BodyContent2">
-		<button class="btn btn-success ps-5 pe-5" type="button" onclick="">test btn</button>
+	<div class="container-fluid pt-5" id="aboutBodyContent2">
+		Content 2
 	</div>
-	
 	<div class="container">
 		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
 			<p class="col-md-4 mb-0 text-body-secondary">&copy; 2025 BSCPE SENIORS INC.</p>
 				<ul class="nav col-md-4 justify-content-end">
-				<li class="nav-item"><a href="../home.html" class="nav-link px-2 text-dark">Home</a></li>
-				<!-- <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li> -->
-				<li class="nav-item"><a href="../about.html" class="nav-link px-2 text-dark">About</a></li>
+				<li class="nav-item"><a href="/smc-webassist/home" class="nav-link px-2 text-body-secondary">Home</a></li>
+				<!-- <li class="nav-item"><a href="/smc-webassist/#" class="nav-link px-2 text-body-secondary">FAQs</a></li> -->
+				<li class="nav-item"><a href="/smc-webassist/about#" class="nav-link px-2 text-body-secondary">About</a></li>
 			</ul>
 		</footer>
 	</div>
 	<br>
 	<script src="https://kit.fontawesome.com/67f996be23.js" crossorigin="anonymous"></script>
-	<script src="../../script.js"></script>
-	<script src="../../signupScript.js"></script>
-	<script src="../../bootstrap-5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+	<script src="/js/script.js"></script>
+	<script src="/js/signupScript.js"></script>
+	<script src="/bootstrap/bootstrap-5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 </html>

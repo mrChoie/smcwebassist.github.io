@@ -1,6 +1,6 @@
 /public/bootstrap/bootstrap-5.0.2
 /node_modules
-/.vscode
+.vscode/
 package-lock.json
 package.json
 smcWebAssistDB.sql

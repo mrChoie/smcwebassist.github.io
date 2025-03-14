@@ -1,9 +1,11 @@
 import express from 'express';
+import ejs from 'ejs';
 import { getTickets, getTicket, createTicket } from './database.js';
 import navRouter from './routes/nav.js';
 
 const app = express();
-app.set('view engine', 'ejs');
+app.engine("html", ejs.renderFile);
+app.set('view engine', 'html');
 app.use(express.json());
 app.use(express.static('public'));
 app.use('/smc-webassist', navRouter);
@@ -24,7 +26,7 @@ app.get("/smc-webassist/ticket/:id", async (req, res) => {
     return;
   }
 });
-
+    
 app.post("/smc-webassist/ticket/submit", async (req, res) => {
   const { tktCategory, tktPublisher } = req.body;
   const ticket = await createTicket(tktCategory, tktPublisher);
