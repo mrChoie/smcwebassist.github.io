@@ -1,0 +1,30 @@
+{
+  "name": "smc-webassist",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./controller/server.js",
+  "scripts": {
+    "start": "npx nodemon ./controller/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrChoie/SMC-WebAssist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrChoie/SMC-WebAssist/issues"
+  },
+  "homepage": "https://github.com/mrChoie/SMC-WebAssist#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^5.0.1",
+    "mysql2": "^3.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

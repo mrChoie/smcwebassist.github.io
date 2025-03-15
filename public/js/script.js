@@ -32,18 +32,30 @@ function closeLogin(){
   element.style.display = "none";
 }
 
-function toggleTicketInvalidNotice(){
-  let element = document.getElementById("ticketInvalidNotice");
-  if (document.getElementById("ticketStudName").value != "" &&
-  document.getElementById("ticketIdNum").value != "" &&
-  document.getElementById("ticketSubj").value != "" &&
-  document.getElementById("ticketDesc").value != "" ){
-    element.style.display = "none";
-  } else {
-    element.style.display = "flex";
-  }
-}
+function toggleInvalidNotice(page){
+  
+  let ticket = document.getElementById("ticketInvalidNotice");
+  let feedback = document.getElementById("feedbackInvalidNotice");
 
+  if (page == 'ticket') {
+    if (document.getElementById("ticketStudName").value != "" &&
+      document.getElementById("ticketIdNum").value != "" &&
+      document.getElementById("ticketSubj").value != "" &&
+      document.getElementById("ticketDesc").value != "" ){
+      ticket.style.display = "none"; 
+    } else {
+      ticket.style.display = "flex";
+    }
+  } else {
+    if (document.getElementById("feedbackSubj").value != "" &&
+      document.getElementById("feedbackDesc").value != "" ){
+      feedback.style.display = "none";
+    } else {
+      feedback.style.display = "flex";
+    }
+  }
+  
+}
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
   'use strict'

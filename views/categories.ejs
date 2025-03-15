@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>SMC Web-Assist | Settings</title>
-	<link rel="icon" type="image/x-icon" href="../img/smcLogo.ico">
-	<link href="../bootstrap-5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+	<link rel="icon" type="image/x-icon" href="/img/smcLogo.ico">
+	<link href="/bootstrap/bootstrap-5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
 
 </head>
 <body>
@@ -15,7 +14,7 @@
 			<div class="card text-center rounded-lg">
 				<i class="fa-solid fa-close mt-2 me-2" onclick="closeLogin()" id="closeLoginPrompt"></i>
 				<div class="card-body">
-					<img class="pt-4" src="../img/smcLogo.png" style="height: 40%; width: 40%; margin: auto;"><br><br>
+					<img class="pt-4" src="/img/smcLogo.png" style="height: 40%; width: 40%; margin: auto;"><br><br>
 					<h5> SMC WEB-Assistant</h5>
 					<div class="row pt-5">
 						<div class="col-2 ps-5">
@@ -40,16 +39,15 @@
 						<button class="btn btn-outline-success" type="button" id="LoginBtn" onclick="signIn()">Log In</button>
 					</div>
 					<br>
-					<p style="font-size: 13px;">Don't have an Account? <a style="cursor: pointer; color: rgb(2, 80, 145);" href="signup.html">Sign up!</a></p>
+					<p style="font-size: 13px;">Don't have an Account? <a style="cursor: pointer; color: rgb(2, 80, 145);" href="/smc-webassist/signup">Sign up!</a></p>
 				</div>
 			</div>
 		</div>
-
 	</div>
 	<nav class="navbar navbar-expand-lg navbar-light p-3" id="navBar">
 		<!-- Home Button -->
 		<!-- Webpage Name -->
-		<a class="navbar-brand m-0 pt-0 ps-3 pe-2" href="home.html"> SMC Web-Assist</a>
+		<a class="navbar-brand m-0 pt-0 ps-3 pe-2" href="/smc-webassist/home"> SMC Web-Assist</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarContent" aria-controls="navBarContent" aria-expanded="false">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -57,28 +55,24 @@
 			<ul class="navbar-nav d-flex justify-content-start me-auto mb-2 mb-lg-0">
 				<li class="nav-item ps-3">
 				<!-- Submit Button -->
-				<a class="nav-link active" aria-current="page" href="#">Submit</a>
+				<a class="nav-link active" aria-current="page" href="/smc-webassist/category">Submit</a>
 				</li>
 				<li class="nav-item ps-3">
 				<!-- Feedback Button -->
-				<a class="nav-link" aria-current="page" href="feedback.html">Feedback</a>
+				<a class="nav-link" aria-current="page" href="/smc-webassist/feedback">Feedback</a>
 				</li>
 				<li class="nav-item ps-3">
 				<!-- About Button -->
-				<a class="nav-link" aria-current="page" href="about.html">About</a>
+				<a class="nav-link" aria-current="page" href="/smc-webassist/about">About</a>
 				</li>
 				<li class="nav-item ps-3">
 				<!-- Account Button -->
-				 <!--
-				<button class="btn btn-dark d-float" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="collapseWidthExample">
-					<i class="fa fa-user"></i>
-				</button>-->
 				<button class="btn nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="accOpt" id="accNavBarBtn">Account</button>
 				<div class="collapse collapse-horizontal text-light position-absolute mt-3" id="accOpt">
 					<nav id="accOptContent" style="width: 300px; border-radius: 0px 0px 20px 20px;">
 						<div class="d-flex flex-column">
-							<a class="btn nav-link" href="account.html">Profile</a>
-							<a class="btn nav-link" href="settings.html">Settings</a>
+							<a class="btn nav-link" href="/smc-webassist/account">Profile</a>
+							<a class="btn nav-link" href="/smc-webassist/account/settings">Settings</a>
 							<button onclick="openLogin()" class="btn nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="accOpt" id="loginPrompt">Login</button>
 							<button class="btn p-3" id="logoutBtn">Logout</button>	
 						</div>
@@ -97,9 +91,9 @@
 				<div class="col-sm-3 p-0">
 					<div class="card m-2">
 						<div class="card-body">
-							<img class="card-img-top img-fluid" src="../img/smcLogo.png" alt="" id="cardTempImg">
+							<img class="card-img-top img-fluid" src="/img/smcLogo.png" alt="" id="cardTempImg">
 							<h5>Category #1</h5>
-							<a href="categories/category1.html">
+							<a href="/smc-webassist/ticket-form">
 								<button class="btn btn-outline-success border-0 ps-4 pe-4 mt-3 mb-3">
 									Learn more
 								</button>
@@ -110,9 +104,9 @@
 				<div class="col-sm-3 p-0">
 					<div class="card m-2">
 						<div class="card-body">
-							<img class="card-img-top img-fluid" src="../img/smcLogo.png" alt="" id="cardTempImg">
+							<img class="card-img-top img-fluid" src="/img/smcLogo.png" alt="" id="cardTempImg">
 							<h5>Category #2</h5>
-							<a href="categories/category1.html">
+							<a href="/smc-webassist/ticket-form">
 								<button class="btn btn-outline-success border-0 ps-4 pe-4 mt-3 mb-3">
 									Learn more
 								</button>
@@ -123,9 +117,9 @@
 				<div class="col-sm-3 p-0">
 					<div class="card m-2">
 						<div class="card-body">
-							<img class="card-img-top img-fluid" src="../img/smcLogo.png" alt="" id="cardTempImg">
+							<img class="card-img-top img-fluid" src="/img/smcLogo.png" alt="" id="cardTempImg">
 							<h5>Category #3</h5>
-							<a href="categories/category1.html">
+							<a href="/smc-webassist/ticket-form">
 								<button class="btn btn-outline-success border-0 ps-4 pe-4 mt-3 mb-3">
 									Learn more
 								</button>
@@ -136,9 +130,9 @@
 				<div class="col-sm-3 p-0">
 					<div class="card m-2">
 						<div class="card-body">
-							<img class="card-img-top img-fluid" src="../img/smcLogo.png" alt="" id="cardTempImg">
+							<img class="card-img-top img-fluid" src="/img/smcLogo.png" alt="" id="cardTempImg">
 							<h5>Category #4</h5>
-							<a href="categories/category1.html">
+							<a href="/smc-webassist/ticket-form">
 								<button class="btn btn-outline-success border-0 ps-4 pe-4 mt-3 mb-3">
 									Learn more
 								</button>
@@ -151,9 +145,9 @@
 				<div class="col-sm-3 p-0">
 					<div class="card m-2">
 						<div class="card-body">
-							<img class="card-img-top img-fluid" src="../img/smcLogo.png" alt="" id="cardTempImg">
+							<img class="card-img-top img-fluid" src="/img/smcLogo.png" alt="" id="cardTempImg">
 							<h5>Category #5</h5>
-							<a href="categories/category1.html">
+							<a href="/smc-webassist/ticket-form">
 								<button class="btn btn-outline-success border-0 ps-4 pe-4 mt-3 mb-3">
 									Learn more
 								</button>
@@ -164,9 +158,9 @@
 				<div class="col-sm-3 p-0">
 					<div class="card m-2">
 						<div class="card-body">
-							<img class="card-img-top img-fluid" src="../img/smcLogo.png" alt="" id="cardTempImg">
+							<img class="card-img-top img-fluid" src="/img/smcLogo.png" alt="" id="cardTempImg">
 							<h5>Category #6</h5>
-							<a href="categories/category1.html">
+							<a href="/smc-webassist/ticket-form">
 								<button class="btn btn-outline-success border-0 ps-4 pe-4 mt-3 mb-3">
 									Learn more
 								</button>
@@ -177,9 +171,9 @@
 				<div class="col-sm-3 p-0">
 					<div class="card m-2">
 						<div class="card-body">
-							<img class="card-img-top img-fluid" src="../img/smcLogo.png" alt="" id="cardTempImg">
+							<img class="card-img-top img-fluid" src="/img/smcLogo.png" alt="" id="cardTempImg">
 							<h5>Category #7</h5>
-							<a href="categories/category1.html">
+							<a href="/smc-webassist/ticket-form">
 								<button class="btn btn-outline-success border-0 ps-4 pe-4 mt-3 mb-3">
 									Learn more
 								</button>
@@ -190,9 +184,9 @@
 				<div class="col-sm-3 p-0">
 					<div class="card m-2">
 						<div class="card-body">
-							<img class="card-img-top img-fluid" src="../img/smcLogo.png" alt="" id="cardTempImg">
+							<img class="card-img-top img-fluid" src="/img/smcLogo.png" alt="" id="cardTempImg">
 							<h5>Category #8</h5>
-							<a href="categories/category1.html">
+							<a href="/smc-webassist/ticket-form">
 								<button class="btn btn-outline-success border-0 ps-4 pe-4 mt-3 mb-3">
 									Learn more
 								</button>
@@ -209,18 +203,17 @@
 	</div>
 	<div class="container">
 		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-			<p class="col-md-4 mb-0 text-body-secondary">&copy; 2025 BSCPE SENIORS INC.</p>
+			<p class="col-md-4 mb-0 text-dark">&copy; 2025 BSCPE SENIORS INC.</p>
 				<ul class="nav col-md-4 justify-content-end">
-				<li class="nav-item"><a href="home.html" class="nav-link px-2 text-body-secondary">Home</a></li>
-				<!-- <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li> -->
-				<li class="nav-item active"><a href="about.html" class="nav-link px-2 text-body-secondary">About</a></li>
+				<li class="nav-item"><a href="/smc-webassist/home" class="nav-link px-2 text-dark">Home</a></li>
+				<!-- <li class="nav-item"><a href="/smc-webassist/#" class="nav-link px-2 text-dark">FAQs</a></li> -->
+				<li class="nav-item"><a href="/smc-webassist/about" class="nav-link px-2 text-dark">About</a></li>
 			</ul>
 		</footer>
 	</div>
 	<br>
 	<script src="https://kit.fontawesome.com/67f996be23.js" crossorigin="anonymous"></script>
-	<script src="../script.js"></script>
-	<script src="../signupScript.js"></script>
-	<script src="../bootstrap-5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+	<script src="/js/script.js"></script>
+	<script src="/js/signupScript.js"></script>
+	<script src="/bootstrap/bootstrap-5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
-</html>
