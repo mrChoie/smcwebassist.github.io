@@ -1,10 +1,10 @@
 {
   "name": "smc-webassist",
   "version": "1.0.0",
-  "main": "database.js",
   "type": "module",
+  "main": "./model/database.js",
   "scripts": {
-    "dev": "npx nodemon app.js"
+    "dev": "npx nodemon ./controller/server.js"
   },
   "repository": {
     "type": "git",
