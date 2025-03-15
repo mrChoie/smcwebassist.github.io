@@ -28,5 +28,14 @@ router.get("/ticket-form", async (req, res) => {
 router.get("/signup", async (req, res) => {
     res.render('signup.ejs')
 })
+// router.post('/auth/register', async (req, res) => {
+//     console.log("Registering user");
+//     const { userName, userStudId, userPass } = req.body;
+//     console.log({
+//         userName,
+//         userStudId,
+//         userPass
+//     });
+// });
 
 export default router;

@@ -2,9 +2,9 @@
   "name": "smc-webassist",
   "version": "1.0.0",
   "type": "module",
-  "main": "./model/database.js",
+  "main": "./controller/server.js",
   "scripts": {
-    "dev": "npx nodemon ./controller/server.js"
+    "start": "npx nodemon ./controller/server.js"
   },
   "repository": {
     "type": "git",
