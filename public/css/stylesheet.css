@@ -3,6 +3,17 @@
 	transition: 0.3s;
 }
 
+.responseContainer {
+	/* background-color: blueviolet; */
+	font-size: 100%;
+	height: 10px;
+	width: 100%;
+}
+
+#responseUserNotExist, #responseDivInvalidPass, #responseSuccess  {
+	margin: auto;
+}
+
 .fa-close {
 	font-size:24px;
 	position: absolute;
@@ -27,11 +38,12 @@ nav {
 	height: 100%;
 	width: 100%;
 	background-color: rgba(5, 5, 5, 0.3);
+	display: none;
 
 }
 #modalLogin {
 	/* padding: 2.5px; */
-	margin-top: 150px;
+	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 360px;

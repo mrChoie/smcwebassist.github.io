@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>SMC Web-Assist | Sign Up</title>
+	<title>SMC Web-Assist | Sign Ip</title>
 	<link rel="icon" type="image/x-icon" href="/img/smcLogo.ico">
 	<link href="/bootstrap/bootstrap-5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
@@ -14,48 +14,59 @@
 		<a class="text-dark navbar-brand ps-3 " href="/smc-webassist/home">SMC-Web Assist</a>
 	</nav>
 	<div>
-		<div class="rounded shadow" id="modalLogin" style="height: 548px;">
+		<div class="rounded shadow" id="modalLogin" style=" height: 525px;">
 			<div class="card text-center">
 				<div class="card-body">
 					<img class="pt-4" src="/img/smcLogo.png" style="height: 40%; width: 40%; margin: auto;"><br><br>
 					<h5> SMC WEB-Assistant</h5>
-					<form action="/smc-webassist/register" method="POST" class="needs-validation" novalidate>
-						<div class="row pt-5">
-							<div class="col-2 ps-5">
+					<!-- action="/smc-webassist/login" method="POST" class="needs-validation" novalidate-->
+					<form  >
+						<div class="row mt-5">
+							<div class="col-2 ps-5 pt-1">
 								<i class="fa-solid fa-user-circle pt-2" style="font-size: 1.2em;"></i>
 							</div>
+							
 							<div class="col-9">
-								<input type="text" class="form-control rounded-0 border-2 border-start-0 border-top-0 border-end-0" id="userName" placeholder="Username" name="userName" required>
-							</div>
-						</div>
-						<div class="row pt-2">
-							<div class="col-2 ps-5 pt-2">
+								<input type="text" class="pb-0 form-control rounded-0 border-2 border-start-0 border-top-0 border-end-0" id="userName" placeholder="Username" name="userName" required>
 								
 							</div>
-							<div class="col-9">
-								<input type="text" class="form-control rounded-0 border-2 border-start-0 border-top-0 border-end-0" id="userStudId" placeholder="Student ID" name="userStudId" required>
+						</div>
+						<div style="height: 20px; padding: 0px;">
+							<div class="col-sm-3 responseContainer">
+								<div class="text-danger" id="responseUserNotExist">
+									
+								</div>
 							</div>
 						</div>
-						<div class="row pt-4">
-							<div class="col-2 ps-5">
+						<div class="row mt-2">
+							<div class="col-2 ps-5 pt-1">
 								<i class="fa-solid fa-lock pt-2" style="font-size: 1.2em;"></i>
 							</div>
 							<div class="col-9">
-								<input type="password" class="form-control rounded-0 border-2 border-start-0 border-top-0 border-end-0" id="userPass" placeholder="Password" onkeyup="showPassIcon()" name="userPass" required>
+								<input type="password" class="pb-0 form-control rounded-0 border-2 border-start-0 border-top-0 border-end-0" id="userPass" placeholder="Password" onkeyup="showPassIcon()" name="userPass" required>
 								<div id="showPassIconDiv">
 									<i class="fa-solid fa-eye-slash" id="showPassIcon" onclick="showHidePass()"></i>
 								</div>
 							</div>
 						</div>
+						<div style="height: 20px; padding: 0px;">
+							<div class="col-sm-3 responseContainer">
+								<div class="text-danger" id="responseDivInvalidPass">
+
+								</div>
+							</div>
+						</div>
 						<div class="row text-center mt-4">
 							<div class="col-md-6 offset-md-3">
-									<button class="btn btn-outline-success" type="submit" onclick="signIn()">Create Account</button>
+								<button class="btn btn-outline-success" id="signBtn">Sign in</button>
 							</div>
 						</div>
 					</form>
 					
+					<!-- <div class="text-success" id="responseSuccess">3</div> -->
+					
                     <br>
-					<p class="m-0" style="font-size: 13px;">Already have an account? <a style="cursor: pointer; color: rgb(2, 80, 145);" href="/smc-webassist/signin">Sign in!</a></p>
+                    <p style="font-size: 13px;">Don't have an Account? <a style="cursor: pointer; color: rgb(2, 80, 145);" href="/smc-webassist/signup">Sign up!</a></p>
 				</div>
 			</div>
 		</div>

@@ -4,7 +4,8 @@
   "type": "module",
   "main": "./controller/server.js",
   "scripts": {
-    "start": "npx nodemon ./controller/server.js"
+    "start": "npx nodemon ./controller/server.js",
+    "start2": "npx nodemon ./middleware/authMiddleware.js"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,11 @@
   "homepage": "https://github.com/mrChoie/SMC-WebAssist#readme",
   "description": "",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^5.0.1",
+    "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.13.0"
   },
   "devDependencies": {

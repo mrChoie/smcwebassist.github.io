@@ -1,6 +1,9 @@
 import express from 'express';
-import { getTickets, getTicket, createTicket } from '../model/database.js';
+import auth from './userHandler.js';
+import { getTickets, getTicket, createTicket, updateTicket} from '../model/database.js';
+
 const db = express();
+db.use('/smc-webassist/auth', auth);
 
 db.get("/tickets", async (req, res) => {
     const tickets = await getTickets();
@@ -20,8 +23,8 @@ db.get("/ticket/:id", async (req, res) => {
 });
 
 db.post("/ticket/submit", async (req, res) => {
-    const { tktCategory, tktPublisher } = req.body;
-    const ticket = await createTicket(tktCategory, tktPublisher);
+    const { tktCategory, tktPublisher, tktPubStudId, tktSubj, tktDesc, tktFile} = req.body;
+    const ticket = await createTicket(tktCategory, tktPublisher, tktPubStudId, tktSubj, tktDesc, tktFile);
     res.status(201).send(ticket);
 });
 
