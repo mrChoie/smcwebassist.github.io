@@ -9,50 +9,17 @@
 
 </head>
 <body>
-	<div id="modalContainer">
-		<div class="rounded shadow animate rounded-lg" id="modalLogin">
-			<div class="card text-center rounded-lg">
-				<i class="fa-solid fa-close mt-2 me-2" onclick="closeLogin()" id="closeLoginPrompt"></i>
-				<div class="card-body">
-					<img class="pt-4" src="/img/smcLogo.png" style="height: 40%; width: 40%; margin: auto;"><br><br>
-					<h5> SMC WEB-Assistant</h5>
-					<div class="row pt-5">
-						<div class="col-2 ps-5">
-							<i class="fa fa-user-circle pt-2" style="font-size: 1.2em;"></i>
-						</div>
-						<div class="col-9">
-							<input type="text" class="form-control rounded-0 border-2 border-start-0 border-top-0 border-end-0" id="userName" placeholder="Username">
-						</div>
-					</div>
-					<div class="row pt-2">
-						<div class="col-2 ps-5">
-							<i class="fa fa-lock pt-2" style="font-size: 1.2em;"></i>
-						</div>
-						<div class="col-9">
-							<input type="password" class="form-control rounded-0 border-2 border-start-0 border-top-0 border-end-0" id="userPass" placeholder="Password" onkeyup="showPassIcon()">
-							<div id="showPassIconDiv">
-								<i class="fa-solid fa-eye-slash" id="showPassIcon" onclick="showHidePass()"></i>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 offset-md-3 pt-4">
-						<button class="btn btn-outline-success" type="button" id="LoginBtn" onclick="signIn()">Log In</button>
-					</div>
-					<br>
-					<p style="font-size: 13px;">Don't have an Account? <a style="cursor: pointer; color: rgb(2, 80, 145);" href="/smc-webassist/signup">Sign up!</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
 	<nav class="navbar navbar-expand-lg navbar-light p-3" id="navBar">
-		<!-- Home Button -->
-		<!-- Webpage Name -->
-		<a class="navbar-brand m-0 pt-0 ps-3 pe-2" href="/smc-webassist/home"> SMC Web-Assist</a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarContent" aria-controls="navBarContent" aria-expanded="false">
+		<div class="container-fluid">
+		<a class="navbar-brand ps-3" href="/smc-webassist/home">SMC-Web Assist</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<div class="collapse navbar-collapse" id="navBarContent">
-			<ul class="navbar-nav d-flex justify-content-start me-auto mb-2 mb-lg-0">
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item ps-3">
+					<hr>
+				</li>
 				<li class="nav-item ps-3">
 				<!-- Submit Button -->
 				<a class="nav-link active" aria-current="page" href="/smc-webassist/category">Submit</a>
@@ -65,21 +32,17 @@
 				<!-- About Button -->
 				<a class="nav-link" aria-current="page" href="/smc-webassist/about">About</a>
 				</li>
-				<li class="nav-item ps-3">
-				<!-- Account Button -->
-				<button class="btn nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="accOpt" id="accNavBarBtn">Account</button>
-				<div class="collapse collapse-horizontal text-light position-absolute mt-3" id="accOpt">
-					<nav id="accOptContent" style="width: 300px; border-radius: 0px 0px 20px 20px;">
-						<div class="d-flex flex-column">
-							<a class="btn nav-link" href="/smc-webassist/account">Profile</a>
-							<a class="btn nav-link" href="/smc-webassist/account/settings">Settings</a>
-							<button onclick="openLogin()" class="btn nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#accOpt" aria-expanded="false" aria-controls="accOpt" id="loginPrompt">Login</button>
-							<button class="btn p-3" id="logoutBtn">Logout</button>	
-						</div>
-					</nav>
-				</div>
-				</li>
 			</ul>
+			<form class="d-flex">
+				<div style="display: flex;" id="loggedInDiv">
+					<a class="btn border-0 ps-3" href="/smc-webassist/account">Profile</a>
+				</div>
+				
+				<div style="display: flex;" id="loggedOutDiv">
+					<a class="btn border-0 ps-3" href="/smc-webassist/signin">Sign in</a>
+				</div>
+			</form>
+		</div>
 		</div>
 	</nav>
 	
@@ -92,8 +55,8 @@
 					<div class="card m-2">
 						<div class="card-body">
 							<img class="card-img-top img-fluid" src="/img/smcLogo.png" alt="" id="cardTempImg">
-							<h5>Category #1</h5>
-							<a href="/smc-webassist/ticket-form">
+							<h5>School Resources</h5>
+							<a href="/smc-webassist/ticket-form?category=1">
 								<button class="btn btn-outline-success border-0 ps-4 pe-4 mt-3 mb-3">
 									Learn more
 								</button>
@@ -105,8 +68,8 @@
 					<div class="card m-2">
 						<div class="card-body">
 							<img class="card-img-top img-fluid" src="/img/smcLogo.png" alt="" id="cardTempImg">
-							<h5>Category #2</h5>
-							<a href="/smc-webassist/ticket-form">
+							<h5>Institutional Functionality</h5>
+							<a href="/smc-webassist/ticket-form?category=2">
 								<button class="btn btn-outline-success border-0 ps-4 pe-4 mt-3 mb-3">
 									Learn more
 								</button>
@@ -118,8 +81,8 @@
 					<div class="card m-2">
 						<div class="card-body">
 							<img class="card-img-top img-fluid" src="/img/smcLogo.png" alt="" id="cardTempImg">
-							<h5>Category #3</h5>
-							<a href="/smc-webassist/ticket-form">
+							<h5>School Policies & Governance</h5>
+							<a href="/smc-webassist/ticket-form?category=3">
 								<button class="btn btn-outline-success border-0 ps-4 pe-4 mt-3 mb-3">
 									Learn more
 								</button>
@@ -131,8 +94,8 @@
 					<div class="card m-2">
 						<div class="card-body">
 							<img class="card-img-top img-fluid" src="/img/smcLogo.png" alt="" id="cardTempImg">
-							<h5>Category #4</h5>
-							<a href="/smc-webassist/ticket-form">
+							<h5>School Infrasstructure & Environment</h5>
+							<a href="/smc-webassist/ticket-form?category=4">
 								<button class="btn btn-outline-success border-0 ps-4 pe-4 mt-3 mb-3">
 									Learn more
 								</button>
@@ -146,8 +109,8 @@
 					<div class="card m-2">
 						<div class="card-body">
 							<img class="card-img-top img-fluid" src="/img/smcLogo.png" alt="" id="cardTempImg">
-							<h5>Category #5</h5>
-							<a href="/smc-webassist/ticket-form">
+							<h5>Student's Well-being & Stressors</h5>
+							<a href="/smc-webassist/ticket-form?category=5">
 								<button class="btn btn-outline-success border-0 ps-4 pe-4 mt-3 mb-3">
 									Learn more
 								</button>
@@ -159,8 +122,8 @@
 					<div class="card m-2">
 						<div class="card-body">
 							<img class="card-img-top img-fluid" src="/img/smcLogo.png" alt="" id="cardTempImg">
-							<h5>Category #6</h5>
-							<a href="/smc-webassist/ticket-form">
+							<h5>Equality & Fairness</h5>
+							<a href="/smc-webassist/ticket-form?category=6">
 								<button class="btn btn-outline-success border-0 ps-4 pe-4 mt-3 mb-3">
 									Learn more
 								</button>
@@ -172,8 +135,8 @@
 					<div class="card m-2">
 						<div class="card-body">
 							<img class="card-img-top img-fluid" src="/img/smcLogo.png" alt="" id="cardTempImg">
-							<h5>Category #7</h5>
-							<a href="/smc-webassist/ticket-form">
+							<h5>Inquire</h5>
+							<a href="/smc-webassist/ticket-form?category=7">
 								<button class="btn btn-outline-success border-0 ps-4 pe-4 mt-3 mb-3">
 									Learn more
 								</button>
@@ -185,8 +148,8 @@
 					<div class="card m-2">
 						<div class="card-body">
 							<img class="card-img-top img-fluid" src="/img/smcLogo.png" alt="" id="cardTempImg">
-							<h5>Category #8</h5>
-							<a href="/smc-webassist/ticket-form">
+							<h5>Other</h5>
+							<a href="/smc-webassist/ticket-form?category=8">
 								<button class="btn btn-outline-success border-0 ps-4 pe-4 mt-3 mb-3">
 									Learn more
 								</button>
@@ -214,6 +177,5 @@
 	<br>
 	<script src="https://kit.fontawesome.com/67f996be23.js" crossorigin="anonymous"></script>
 	<script src="/js/script.js"></script>
-	<script src="/js/signupScript.js"></script>
 	<script src="/bootstrap/bootstrap-5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>

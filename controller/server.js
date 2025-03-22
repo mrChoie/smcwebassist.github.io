@@ -1,27 +1,30 @@
 import express from 'express';
-import connection from '../model/database.js';
-import ejs from 'ejs';
-import auth from '../controller/auth.js';
-import navRouter from '../routes/nav.js';
-import db from './ticketDB.js';
-
-connection.connect(err => {
-    if (err) {
-      console.error('Error connecting to the database:', err);
-      process.exit(1); // Exit the application if the database connection fails
-    } else {
-      console.log('Connected to the database');
-    }
-  });
+// import connection from '../model/database.js';
+import checkCookie from '../middleware/checkCookieOnLoad.js';
+import publicRoute from '../routes/publicRoute.js';
+import user from './userHandler.js';
+import auth from '../middleware/authenticator.js';
+import admin from '../middleware/adminAuth.js'
+import feedb from './feedbackHandler.js';
+import privateRoute from "../routes/privateRoute.js";
+import db from './ticketHandler.js';
 
 const app = express();
-app.engine("html", ejs.renderFile);
-app.set('view engine', 'html');
+// app.engine("html", ejs.renderFile);
+// app.set('view engine', 'html');
+app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
-app.use('/smc-webassist', auth);
-app.use('/smc-webassist', navRouter);
+app.use('/checkCookie', checkCookie);
+app.use('/getTickets', db);
+app.use('/getInfo', user);
+app.use('/smc-webassist', publicRoute);
+// app.use(auth)
+// app.use('/smc-webassist', auth);
+app.use('/smc-webassist/admin', admin);
+app.use('/smc-webassist', user, auth, privateRoute)
+app.use('/smc-webassist', feedb);
 app.use('/smc-webassist', db);
 
 // app.post('/smc-webassist/auth/register', async (req, res) => {
