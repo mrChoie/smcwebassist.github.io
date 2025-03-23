@@ -10,9 +10,11 @@ import privateRoute from "../routes/privateRoute.js";
 import db from './ticketHandler.js';
 
 const app = express();
-// app.engine("html", ejs.renderFile);
+// app.engine("html");
 // app.set('view engine', 'html');
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
+// app.engine("html")
+
 app.use(express.json());
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
